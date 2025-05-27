@@ -12,7 +12,6 @@ import {
   Toolbar,
   Typography
 } from '@mui/material'
-import { useState } from 'react'
 
 const theme = createTheme({
   palette: {
@@ -38,7 +37,6 @@ const theme = createTheme({
 })
 
 function App() {
-  const [count, setCount] = useState(0)
 
   return (
     <ThemeProvider theme={theme}>
