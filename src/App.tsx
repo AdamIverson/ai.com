@@ -9,8 +9,7 @@ import {
   Grid,
   Paper,
   ThemeProvider,
-  Toolbar,
-  Typography
+  Toolbar
 } from '@mui/material'
 
 const theme = createTheme({
@@ -79,9 +78,6 @@ function App() {
         </Paper>
 
         <Box textAlign="center" mt={6}>
-          <Typography color="text.secondary" variant="body1">
-            Ready for deployment on Netlify 🚀
-          </Typography>
         </Box>
       </Container>
     </ThemeProvider>
