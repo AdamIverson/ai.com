@@ -9,7 +9,7 @@ export default function Home() {
           Adam Iverson
         </Typography>
         <Typography variant="h5" color="text.secondary" mb={3}>
-          Software Developer • Photographer • Improv Performer • Runner
+          Software Developer • Photographer • Improvisor • Runner
         </Typography>
         <Typography variant="body1" color="text.secondary" sx={{ maxWidth: 600, mx: 'auto' }}>
           Welcome to my digital portfolio. I'm passionate about creating elegant software solutions,
