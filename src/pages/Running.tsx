@@ -1,5 +1,5 @@
-import { Box, Container, Typography, Card, CardContent, Grid, Chip, LinearProgress, Paper } from '@mui/material'
-import { DirectionsRun, Timer, EmojiEvents, Timeline as TimelineIcon, FitnessCenter } from '@mui/icons-material'
+import { DirectionsRun, EmojiEvents, FitnessCenter, Timeline as TimelineIcon, Timer } from '@mui/icons-material'
+import { Box, Card, CardContent, Chip, Container, Grid, LinearProgress, Paper, Typography } from '@mui/material'
 
 export default function Running() {
   const stats = [
@@ -79,7 +79,7 @@ export default function Running() {
           Chasing personal records and pushing limits
         </Typography>
         <Typography variant="body1" color="text.secondary" sx={{ maxWidth: 600, mx: 'auto' }}>
-          Running has taught me discipline, perseverance, and the power of consistent effort. 
+          Running has taught me discipline, perseverance, and the power of consistent effort.
           Every mile is a step towards becoming a better version of myself.
         </Typography>
       </Box>
@@ -164,9 +164,9 @@ export default function Running() {
                         {goalItem.progress}%
                       </Typography>
                     </Box>
-                    <LinearProgress 
-                      variant="determinate" 
-                      value={goalItem.progress} 
+                    <LinearProgress
+                      variant="determinate"
+                      value={goalItem.progress}
                       sx={{ height: 8, borderRadius: 4 }}
                     />
                   </Box>

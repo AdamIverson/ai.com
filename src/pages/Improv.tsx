@@ -1,6 +1,6 @@
-import { Box, Container, Typography, Card, CardContent, Grid, Chip } from '@mui/material'
-import { Timeline, TimelineItem, TimelineSeparator, TimelineConnector, TimelineContent, TimelineDot } from '@mui/lab'
-import { TheaterComedy, Groups, Mic, EmojiEvents } from '@mui/icons-material'
+import { EmojiEvents, Groups, Mic, TheaterComedy } from '@mui/icons-material'
+import { Timeline, TimelineConnector, TimelineContent, TimelineDot, TimelineItem, TimelineSeparator } from '@mui/lab'
+import { Box, Card, CardContent, Chip, Container, Grid, Typography } from '@mui/material'
 
 export default function Improv() {
   const shows = [
@@ -72,7 +72,7 @@ export default function Improv() {
           Making people laugh through spontaneous creativity
         </Typography>
         <Typography variant="body1" color="text.secondary" sx={{ maxWidth: 600, mx: 'auto' }}>
-          Improv has taught me the power of collaboration, quick thinking, and embracing failure as a path to success. 
+          Improv has taught me the power of collaboration, quick thinking, and embracing failure as a path to success.
           These skills translate directly into my professional and personal life.
         </Typography>
       </Box>

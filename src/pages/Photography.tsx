@@ -1,37 +1,23 @@
-import { Box, Container, Typography, Button, Paper } from '@mui/material'
-import { OpenInNew, Camera } from '@mui/icons-material'
-import { useEffect } from 'react'
+import { Camera, OpenInNew } from '@mui/icons-material'
+import { Box, Button, Container, Paper, Typography } from '@mui/material'
 
 export default function Photography() {
-  useEffect(() => {
-    // Optional: Add a short delay before redirect for better UX
-    const timer = setTimeout(() => {
-      window.location.href = 'https://adamiversonphotography.com'
-    }, 3000)
-
-    return () => clearTimeout(timer)
-  }, [])
-
-  const handleRedirect = () => {
-    window.location.href = 'https://adamiversonphotography.com'
-  }
-
   return (
     <Container maxWidth="md" sx={{ mt: 8, mb: 4 }}>
       <Paper elevation={3} sx={{ p: 6, textAlign: 'center' }}>
         <Camera sx={{ fontSize: 80, color: 'primary.main', mb: 3 }} />
-        
+
         <Typography variant="h2" component="h1" gutterBottom>
-          📸 Photography
+          Photography
         </Typography>
-        
+
         <Typography variant="h5" color="text.secondary" mb={4}>
-          Redirecting to my photography portfolio...
+          Visual Storytelling Portfolio
         </Typography>
-        
+
         <Typography variant="body1" color="text.secondary" mb={4}>
-          You're being redirected to <strong>adamiversonphotography.com</strong> where you can explore my complete photography portfolio, 
-          including landscape, portrait, and event photography work.
+          Explore my complete photography portfolio at <strong>adamiversonphotography.com</strong>,
+          featuring landscape, portrait, and event photography work.
         </Typography>
 
         <Box>
@@ -39,16 +25,14 @@ export default function Photography() {
             variant="contained"
             size="large"
             startIcon={<OpenInNew />}
-            onClick={handleRedirect}
+            href="https://adamiversonphotography.com"
+            target="_blank"
+            rel="noopener noreferrer"
             sx={{ mb: 2 }}
           >
             Visit Photography Portfolio
           </Button>
         </Box>
-
-        <Typography variant="caption" color="text.secondary" display="block" mt={3}>
-          Automatic redirect in 3 seconds...
-        </Typography>
       </Paper>
     </Container>
   )

@@ -1,5 +1,5 @@
-import { Box, Container, Typography, Card, CardContent, Grid, Chip, Button } from '@mui/material'
-import { Download, School, Work, LocationOn } from '@mui/icons-material'
+import { Download, LocationOn, School, Work } from '@mui/icons-material'
+import { Box, Button, Card, CardContent, Chip, Container, Grid, Typography } from '@mui/material'
 
 export default function Resume() {
   const education = [

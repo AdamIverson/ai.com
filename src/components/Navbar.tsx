@@ -1,5 +1,5 @@
-import { AppBar, Toolbar, Typography, Button, Box, IconButton } from '@mui/material'
 import { Brightness4, Brightness7 } from '@mui/icons-material'
+import { AppBar, Box, Button, IconButton, Toolbar, Typography } from '@mui/material'
 import { Link, useLocation } from 'react-router-dom'
 
 interface NavbarProps {
@@ -9,14 +9,14 @@ interface NavbarProps {
 
 export default function Navbar({ mode, toggleColorMode }: NavbarProps) {
   const location = useLocation()
-  
+
   const navItems = [
-    { label: 'Home', path: '/', icon: '🏠' },
-    { label: 'Development', path: '/development', icon: '💻' },
-    { label: 'Photography', path: '/photography', icon: '📸' },
-    { label: 'Resume', path: '/resume', icon: '📄' },
-    { label: 'Improv', path: '/improv', icon: '🎭' },
-    { label: 'Running', path: '/running', icon: '🏃‍♂️' }
+    { label: 'Home', path: '/' },
+    { label: 'Development', path: '/development' },
+    { label: 'Photography', path: '/photography' },
+    { label: 'Resume', path: '/resume' },
+    { label: 'Improv', path: '/improv' },
+    { label: 'Running', path: '/running' }
   ]
 
   return (
@@ -27,7 +27,7 @@ export default function Navbar({ mode, toggleColorMode }: NavbarProps) {
             Adam Iverson
           </Link>
         </Typography>
-        
+
         <Box sx={{ display: { xs: 'none', md: 'flex' }, gap: 1 }}>
           {navItems.map((item) => (
             <Button
@@ -36,12 +36,11 @@ export default function Navbar({ mode, toggleColorMode }: NavbarProps) {
               to={item.path}
               color="inherit"
               variant={location.pathname === item.path ? 'outlined' : 'text'}
-              sx={{ 
+              sx={{
                 borderColor: location.pathname === item.path ? 'rgba(255,255,255,0.5)' : 'transparent',
                 minWidth: 'auto'
               }}
             >
-              <span style={{ marginRight: '4px' }}>{item.icon}</span>
               {item.label}
             </Button>
           ))}

@@ -4,13 +4,13 @@ import {
   ThemeProvider,
 } from '@mui/material'
 import { useEffect, useMemo, useState } from 'react'
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
+import { Route, BrowserRouter as Router, Routes } from 'react-router-dom'
 import Navbar from './components/Navbar'
-import Home from './pages/Home'
 import Development from './pages/Development'
+import Home from './pages/Home'
+import Improv from './pages/Improv'
 import Photography from './pages/Photography'
 import Resume from './pages/Resume'
-import Improv from './pages/Improv'
 import Running from './pages/Running'
 
 function App() {

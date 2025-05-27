@@ -1,5 +1,5 @@
-import { Box, Container, Typography, Card, CardContent, Grid, Button, Chip } from '@mui/material'
-import { GitHub, OpenInNew, Code, Web, Terminal } from '@mui/icons-material'
+import { Code, GitHub, OpenInNew, Terminal, Web } from '@mui/icons-material'
+import { Box, Button, Card, CardContent, Chip, Container, Grid, Typography } from '@mui/material'
 
 export default function Development() {
   const skills = [

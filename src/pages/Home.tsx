@@ -1,5 +1,5 @@
-import { Box, Container, Typography, Card, CardContent, Grid, Button } from '@mui/material'
 import { GitHub, OpenInNew } from '@mui/icons-material'
+import { Box, Button, Card, CardContent, Container, Grid, Typography } from '@mui/material'
 
 export default function Home() {
   return (
@@ -12,7 +12,7 @@ export default function Home() {
           Software Developer • Photographer • Improv Performer • Runner
         </Typography>
         <Typography variant="body1" color="text.secondary" sx={{ maxWidth: 600, mx: 'auto' }}>
-          Welcome to my digital portfolio. I'm passionate about creating elegant software solutions, 
+          Welcome to my digital portfolio. I'm passionate about creating elegant software solutions,
           capturing moments through photography, making people laugh through improv, and pushing my limits through running.
         </Typography>
       </Box>
@@ -22,7 +22,7 @@ export default function Home() {
           <Card elevation={3} sx={{ height: '100%', cursor: 'pointer' }} onClick={() => window.location.href = '/development'}>
             <CardContent sx={{ textAlign: 'center', p: 3 }}>
               <Typography variant="h5" component="h2" gutterBottom>
-                💻 Development
+                Development
               </Typography>
               <Typography variant="body2" color="text.secondary">
                 Full-stack development, open source contributions, and technical projects
@@ -32,10 +32,10 @@ export default function Home() {
         </Grid>
 
         <Grid size={{ xs: 12, sm: 6, md: 6, lg: 3 }}>
-          <Card elevation={3} sx={{ height: '100%', cursor: 'pointer' }} onClick={() => window.location.href = '/photography'}>
+          <Card elevation={3} sx={{ height: '100%', cursor: 'pointer' }} onClick={() => window.open('https://adamiversonphotography.com', '_blank')}>
             <CardContent sx={{ textAlign: 'center', p: 3 }}>
               <Typography variant="h5" component="h2" gutterBottom>
-                📸 Photography
+                Photography
               </Typography>
               <Typography variant="body2" color="text.secondary">
                 Visual storytelling through landscape, portrait, and event photography
@@ -48,7 +48,7 @@ export default function Home() {
           <Card elevation={3} sx={{ height: '100%', cursor: 'pointer' }} onClick={() => window.location.href = '/improv'}>
             <CardContent sx={{ textAlign: 'center', p: 3 }}>
               <Typography variant="h5" component="h2" gutterBottom>
-                🎭 Improv
+                Improv
               </Typography>
               <Typography variant="body2" color="text.secondary">
                 Improvisational comedy performances and creative collaboration
@@ -61,7 +61,7 @@ export default function Home() {
           <Card elevation={3} sx={{ height: '100%', cursor: 'pointer' }} onClick={() => window.location.href = '/running'}>
             <CardContent sx={{ textAlign: 'center', p: 3 }}>
               <Typography variant="h5" component="h2" gutterBottom>
-                🏃‍♂️ Running
+                Running
               </Typography>
               <Typography variant="body2" color="text.secondary">
                 Marathon training, race achievements, and fitness journey
