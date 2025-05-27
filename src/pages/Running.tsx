@@ -3,84 +3,96 @@ import { Box, Card, CardContent, Chip, Container, Grid, LinearProgress, Paper, T
 
 export default function Running() {
   const stats = [
-    { label: "Total Miles", value: "2,847", icon: <DirectionsRun /> },
-    { label: "Marathons Completed", value: "5", icon: <EmojiEvents /> },
-    { label: "Personal Record", value: "3:24:17", icon: <Timer /> },
-    { label: "Years Running", value: "8", icon: <TimelineIcon /> }
+    { label: "Total Races", value: "17", icon: <DirectionsRun /> },
+    { label: "100K Completions", value: "2", icon: <EmojiEvents /> },
+    { label: "50-Mile Finishes", value: "8", icon: <Timer /> },
+    { label: "Years Ultrarunning", value: "12+", icon: <TimelineIcon /> }
   ]
 
   const races = [
     {
-      name: "Boston Marathon",
-      year: "2024",
-      time: "3:24:17",
-      placement: "Top 25% Age Group",
-      note: "PR and Boston Qualifier!"
-    },
-    {
-      name: "San Francisco Marathon",
-      year: "2023",
-      time: "3:31:42",
-      placement: "2nd Age Group",
-      note: "Hilly course, great experience"
-    },
-    {
-      name: "Big Sur Marathon",
-      year: "2023",
-      time: "3:45:22",
-      placement: "Finisher",
-      note: "Scenic coastal route"
-    },
-    {
-      name: "Chicago Marathon",
+      name: "Superior Fall Trail Race",
+      distance: "Marathon",
       year: "2022",
-      time: "3:38:15",
-      placement: "Top 30% Overall",
-      note: "First major marathon"
+      time: "9:31:32",
+      placement: "260th Overall",
+      note: "Most recent ultra - challenging but rewarding"
+    },
+    {
+      name: "Minnesota Voyageur Trail Ultra",
+      distance: "50 Miler",
+      year: "2019",
+      time: "13:57:26",
+      placement: "237th Overall",
+      note: "Classic Minnesota trail ultra"
+    },
+    {
+      name: "Wild Duluth Races",
+      distance: "100K",
+      year: "2014",
+      time: "19:37:00",
+      placement: "38th Overall",
+      note: "Personal best 100K performance"
+    },
+    {
+      name: "Black Hills 100",
+      distance: "50 Miler",
+      year: "2013",
+      time: "14:32:19",
+      placement: "25th Overall",
+      note: "Strong performance in beautiful Black Hills"
+    },
+    {
+      name: "Minnesota Voyageur Trail Ultra",
+      distance: "50 Miler",
+      year: "2015",
+      time: "12:44:50",
+      placement: "159th Overall",
+      note: "Personal best 50-mile time"
     }
   ]
 
   const goals = [
     {
-      goal: "Sub-3:20 Marathon",
-      progress: 85,
-      status: "In Progress",
-      target: "Fall 2025"
+      goal: "Return to Racing",
+      progress: 25,
+      status: "Base Building",
+      target: "2025"
     },
     {
-      goal: "Run All World Majors",
-      progress: 40,
-      status: "2/6 Complete",
-      target: "2028"
-    },
-    {
-      goal: "50K Ultramarathon",
-      progress: 20,
-      status: "Training Started",
+      goal: "Sub-12 Hour 50-Miler",
+      progress: 10,
+      status: "Long Term Goal",
       target: "2026"
+    },
+    {
+      goal: "Finish Black Hills 100",
+      progress: 5,
+      status: "Future Challenge",
+      target: "TBD"
     }
   ]
 
   const trainingPhilosophy = [
-    "Consistency over intensity",
-    "Listen to your body",
-    "Fuel properly for long runs",
-    "Cross-training prevents injury",
-    "Mental training is as important as physical"
+    "Respect the distance and terrain",
+    "Nutrition and hydration are everything",
+    "Mental toughness beats speed",
+    "Trail running is meditation in motion",
+    "Every finish is a victory"
   ]
 
   return (
     <Container maxWidth="lg" sx={{ mt: 4, mb: 4 }}>
       <Box textAlign="center" mb={6}>
         <Typography variant="h2" component="h1" gutterBottom>
-          🏃‍♂️ Running
+          Running
         </Typography>
         <Typography variant="h5" color="text.secondary" mb={3}>
-          Chasing personal records and pushing limits
+          Ultrarunning adventures across the Midwest
         </Typography>
         <Typography variant="body1" color="text.secondary" sx={{ maxWidth: 600, mx: 'auto' }}>
-          Running has taught me discipline, perseverance, and the power of consistent effort.
-          Every mile is a step towards becoming a better version of myself.
+          Over a decade of ultrarunning has taught me that the trail doesn't care about your plans -
+          it's about adapting, persevering, and finding joy in the journey, no matter how tough it gets.
         </Typography>
       </Box>
 
@@ -113,7 +125,7 @@ export default function Running() {
       {/* Race History */}
       <Box mb={6}>
         <Typography variant="h4" component="h2" gutterBottom sx={{ display: 'flex', alignItems: 'center', gap: 1 }}>
-          <EmojiEvents /> Marathon History
+          <EmojiEvents /> Notable Race Results
         </Typography>
         <Grid container spacing={3}>
           {races.map((race, index) => (
@@ -126,6 +138,9 @@ export default function Running() {
                     </Typography>
                     <Chip label={race.year} variant="outlined" />
                   </Box>
+                  <Typography variant="body2" color="text.secondary" mb={1}>
+                    {race.distance}
+                  </Typography>
                   <Typography variant="h6" color="primary" gutterBottom>
                     {race.time}
                   </Typography>
