@@ -59,26 +59,15 @@ export default function Running() {
       status: "Base Building",
       target: "2025"
     },
-    {
-      goal: "Sub-12 Hour 50-Miler",
-      progress: 10,
-      status: "Long Term Goal",
-      target: "2026"
-    },
-    {
-      goal: "Finish Black Hills 100",
-      progress: 5,
-      status: "Future Challenge",
-      target: "TBD"
-    }
   ]
 
   const trainingPhilosophy = [
-    "Respect the distance and terrain",
-    "Nutrition and hydration are everything",
-    "Mental toughness beats speed",
-    "Trail running is meditation in motion",
-    "Every finish is a victory"
+    "snacks",
+    "if it's not fun or i get sleepy i quit",
+    "if you can figure out how to eat and drink, you can keep going",
+    "trail running is an awful lot like scrolling",
+    "while i can",
+    "ice on the neck"
   ]
 
   return (
@@ -219,7 +208,7 @@ export default function Running() {
 
       <Box textAlign="center">
         <Typography variant="body1" color="text.secondary" fontStyle="italic">
-          "The miracle isn't that I finished. The miracle is that I had the courage to start." - John Bingham
+            "It doesn't hurt. It just is."
         </Typography>
       </Box>
     </Container>
