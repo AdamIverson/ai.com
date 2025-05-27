@@ -50,7 +50,7 @@ export default function Resume() {
     <Container maxWidth="lg" sx={{ mt: 4, mb: 4 }}>
       <Box textAlign="center" mb={4}>
         <Typography variant="h2" component="h1" gutterBottom>
-          📄 Resume
+          Resume
         </Typography>
         <Typography variant="h5" color="text.secondary" mb={3}>
           Adam Iverson • Software Developer

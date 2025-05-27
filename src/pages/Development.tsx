@@ -3,13 +3,13 @@ import { Box, Button, Card, CardContent, Chip, Container, Grid, Typography } fro
 
 export default function Development() {
   const skills = [
-    'TypeScript', 'React', 'Node.js', 'Python', 'SQL', 'AWS', 'Docker', 'Git',
-    'Material-UI', 'Express', 'PostgreSQL', 'MongoDB', 'Jest', 'Cypress'
+    'TypeScript', 'React', 'Node.js', 'Python', 'SQL', 'Docker', 'Git',
+    'Material-UI', 'Express', 'PostgreSQL', 'MongoDB', 'Jest'
   ]
 
   const projects = [
     {
-      name: 'AI.com Portfolio',
+      name: 'adamiverson.com',
       description: 'This very website! Built with React, TypeScript, Material-UI, and deployed on Netlify.',
       tech: ['React', 'TypeScript', 'Material-UI', 'Netlify'],
       github: 'https://github.com/AdamIverson/ai.com',
@@ -18,8 +18,8 @@ export default function Development() {
     {
       name: 'Photography Portfolio',
       description: 'Professional photography portfolio with dynamic galleries and client management.',
-      tech: ['React', 'Node.js', 'AWS S3', 'Stripe'],
-      github: null,
+      tech: ['React', 'TypeScript', 'Material-UI', 'Node.js',],
+      github: "https://github.com/AdamIverson/portfolio-website",
       live: 'https://adamiversonphotography.com'
     }
   ]
@@ -28,7 +28,7 @@ export default function Development() {
     <Container maxWidth="lg" sx={{ mt: 4, mb: 4 }}>
       <Box textAlign="center" mb={6}>
         <Typography variant="h2" component="h1" gutterBottom>
-          💻 Software Development
+          Software Development
         </Typography>
         <Typography variant="h5" color="text.secondary" mb={3}>
           Building elegant solutions with modern technologies
@@ -109,12 +109,6 @@ export default function Development() {
             <Card elevation={2}>
               <CardContent sx={{ textAlign: 'center', p: 3 }}>
                 <Web sx={{ fontSize: 40, mb: 2, color: 'primary.main' }} />
-                <Typography variant="h6" gutterBottom>
-                  Full-Stack Development
-                </Typography>
-                <Typography variant="body2" color="text.secondary">
-                  End-to-end application development from database design to user interface
-                </Typography>
               </CardContent>
             </Card>
           </Grid>
@@ -122,12 +116,6 @@ export default function Development() {
             <Card elevation={2}>
               <CardContent sx={{ textAlign: 'center', p: 3 }}>
                 <Code sx={{ fontSize: 40, mb: 2, color: 'primary.main' }} />
-                <Typography variant="h6" gutterBottom>
-                  Open Source
-                </Typography>
-                <Typography variant="body2" color="text.secondary">
-                  Contributing to open source projects and building tools for the community
-                </Typography>
               </CardContent>
             </Card>
           </Grid>
@@ -135,12 +123,6 @@ export default function Development() {
             <Card elevation={2}>
               <CardContent sx={{ textAlign: 'center', p: 3 }}>
                 <Terminal sx={{ fontSize: 40, mb: 2, color: 'primary.main' }} />
-                <Typography variant="h6" gutterBottom>
-                  DevOps & Automation
-                </Typography>
-                <Typography variant="body2" color="text.secondary">
-                  CI/CD pipelines, containerization, and cloud infrastructure management
-                </Typography>
               </CardContent>
             </Card>
           </Grid>
