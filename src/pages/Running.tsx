@@ -35,7 +35,7 @@ export default function Running() {
       note: "Personal best 100K performance"
     },
     {
-      name: "Black Hills 100",
+      name: "Black Hills 50 Miler",
       distance: "50 Miler",
       year: "2013",
       time: "14:32:19",
