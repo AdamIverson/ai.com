@@ -1,73 +1,13 @@
 import { DirectionsRun, EmojiEvents, FitnessCenter, Timeline as TimelineIcon, Timer } from '@mui/icons-material'
 import { Box, Card, CardContent, Chip, Container, Grid, LinearProgress, Paper, Typography } from '@mui/material'
+import { goals, races, runningStats, trainingPhilosophy } from '../data/runningData'
 
 export default function Running() {
-  const stats = [
-    { label: "Total Races", value: "17", icon: <DirectionsRun /> },
-    { label: "100K Completions", value: "2", icon: <EmojiEvents /> },
-    { label: "50-Mile Finishes", value: "8", icon: <Timer /> },
-    { label: "Years Ultrarunning", value: "12+", icon: <TimelineIcon /> }
-  ]
-
-  const races = [
-    {
-      name: "Superior Fall Trail Race",
-      distance: "Marathon",
-      year: "2022",
-      time: "9:31:32",
-      placement: "260th Overall",
-      note: "Most recent ultra - challenging but rewarding"
-    },
-    {
-      name: "Minnesota Voyageur Trail Ultra",
-      distance: "50 Miler",
-      year: "2019",
-      time: "13:57:26",
-      placement: "237th Overall",
-      note: "Classic Minnesota trail ultra"
-    },
-    {
-      name: "Wild Duluth Races",
-      distance: "100K",
-      year: "2014",
-      time: "19:37:00",
-      placement: "38th Overall",
-      note: "Personal best 100K performance"
-    },
-    {
-      name: "Black Hills 50 Miler",
-      distance: "50 Miler",
-      year: "2013",
-      time: "14:32:19",
-      placement: "25th Overall",
-      note: "Strong performance in beautiful Black Hills"
-    },
-    {
-      name: "Minnesota Voyageur Trail Ultra",
-      distance: "50 Miler",
-      year: "2015",
-      time: "12:44:50",
-      placement: "159th Overall",
-      note: "Personal best 50-mile time"
-    }
-  ]
-
-  const goals = [
-    {
-      goal: "Return to Racing",
-      progress: 25,
-      status: "Base Building",
-      target: "2025"
-    },
-  ]
-
-  const trainingPhilosophy = [
-    "snacks",
-    "if it's not fun or i get sleepy i quit",
-    "if you can figure out how to eat and drink, you can keep going",
-    "trail running is an awful lot like scrolling",
-    "while i can",
-    "ice on the neck"
+  const statsWithIcons = [
+    { ...runningStats[0], icon: <DirectionsRun /> },
+    { ...runningStats[1], icon: <EmojiEvents /> },
+    { ...runningStats[2], icon: <Timer /> },
+    { ...runningStats[3], icon: <TimelineIcon /> }
   ]
 
   return (
@@ -91,7 +31,7 @@ export default function Running() {
           Running Statistics
         </Typography>
         <Grid container spacing={3}>
-          {stats.map((stat, index) => (
+          {statsWithIcons.map((stat, index) => (
             <Grid size={{ xs: 6, md: 3 }} key={index}>
               <Card elevation={3}>
                 <CardContent sx={{ textAlign: 'center', p: 3 }}>
@@ -206,9 +146,16 @@ export default function Running() {
         </Paper>
       </Box>
 
+      {/* Fun Fact */}
+      <Box textAlign="center" mb={3}>
+        <Typography variant="body2" color="text.secondary">
+          Fun fact: 5 for 5 at Minnesota Voyageur Trail Ultra 🏃‍♂️
+        </Typography>
+      </Box>
+
       <Box textAlign="center">
         <Typography variant="body1" color="text.secondary" fontStyle="italic">
-            "It doesn't hurt. It just is."
+          "It doesn't hurt. It just is."
         </Typography>
       </Box>
     </Container>
