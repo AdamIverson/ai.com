@@ -6,6 +6,8 @@ import {
 import { useEffect, useMemo, useState } from 'react'
 import { Route, BrowserRouter as Router, Routes } from 'react-router-dom'
 import Navbar from './components/Navbar'
+import CollegeEligibility from './pages/CollegeEligibility'
+import Contact from './pages/Contact'
 import Development from './pages/Development'
 import Home from './pages/Home'
 import Improv from './pages/Improv'
@@ -91,6 +93,8 @@ function App() {
           <Route path="/resume" element={<Resume />} />
           <Route path="/improv" element={<Improv />} />
           <Route path="/running" element={<Running />} />
+          <Route path="/college-eligibility" element={<CollegeEligibility />} />
+          <Route path="/contact" element={<Contact />} />
         </Routes>
       </Router>
     </ThemeProvider>

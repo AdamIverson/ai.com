@@ -135,8 +135,8 @@ export const races: Race[] = [
     name: "Zumbro Endurance Run",
     distance: "50 Miler",
     year: "2013",
-    time: "14:27:26",
-    placement: "26th Overall",
+    time: "42 miles",
+    placement: "DNF",
     note: "Technical and challenging Minnesota trail race"
   },
   {

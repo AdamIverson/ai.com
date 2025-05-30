@@ -16,7 +16,9 @@ export default function Navbar({ mode, toggleColorMode }: NavbarProps) {
     { label: 'Photography', path: '/photography' },
     { label: 'Resume', path: '/resume' },
     { label: 'Improv', path: '/improv' },
-    { label: 'Running', path: '/running' }
+    { label: 'Running', path: '/running' },
+    { label: 'College Eligibility', path: '/college-eligibility' },
+    { label: 'Contact', path: '/contact' }
   ]
 
   return (
