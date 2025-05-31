@@ -42,18 +42,16 @@ export default function Contact() {
       })
 
       // Using environment variables for EmailJS configuration
-      const result = await emailjs.sendForm(
+      await emailjs.sendForm(
         import.meta.env.VITE_EMAILJS_SERVICE_ID,
         import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
         form.current!,
         import.meta.env.VITE_EMAILJS_PUBLIC_KEY
       )
 
-      console.log('Email sent successfully:', result.text)
       setSubmitStatus('success')
       setFormData({ name: '', email: '', subject: '', message: '' })
     } catch (error) {
-      console.error('Email sending failed:', error)
       setSubmitStatus('error')
     } finally {
       setIsSubmitting(false)
@@ -61,36 +59,36 @@ export default function Contact() {
   }
 
   return (
-    <Container maxWidth="md" sx={{ mt: 4, mb: 4 }}>
-      <Box textAlign="center" mb={6}>
+    <Container maxWidth="md" sx={{ mt: 2, mb: 2 }}>
+      <Box textAlign="center" mb={3}>
         <Typography variant="h2" component="h1" gutterBottom>
           Contact
         </Typography>
-        <Typography variant="h5" color="text.secondary" mb={3}>
+        <Typography variant="h6" color="text.secondary" mb={2}>
           Let's connect and discuss opportunities
         </Typography>
       </Box>
 
       {/* Contact Form */}
-      <Grid container spacing={4} mb={6}>
+      <Grid container spacing={3} mb={3}>
         <Grid size={{ xs: 12, md: 8 }}>
           <Card elevation={2}>
-            <CardContent sx={{ p: 4 }}>
-              <Box display="flex" alignItems="center" gap={1} mb={3}>
-                <Email sx={{ fontSize: 30, color: 'primary.main' }} />
-                <Typography variant="h5">
+            <CardContent sx={{ p: 3 }}>
+              <Box display="flex" alignItems="center" gap={1} mb={2}>
+                <Email sx={{ fontSize: 24, color: 'primary.main' }} />
+                <Typography variant="h6">
                   Send a Message
                 </Typography>
               </Box>
 
               {submitStatus === 'success' && (
-                <Alert severity="success" sx={{ mb: 3 }}>
+                <Alert severity="success" sx={{ mb: 2 }}>
                   Thank you! Your message has been sent successfully. I'll get back to you soon.
                 </Alert>
               )}
 
               {submitStatus === 'error' && (
-                <Alert severity="error" sx={{ mb: 3 }}>
+                <Alert severity="error" sx={{ mb: 2 }}>
                   Sorry, there was an error sending your message. Please try again or contact me via LinkedIn.
                 </Alert>
               )}
@@ -140,7 +138,7 @@ export default function Contact() {
                       onChange={handleInputChange}
                       required
                       multiline
-                      rows={4}
+                      rows={3}
                       variant="outlined"
                     />
                   </Grid>
@@ -151,7 +149,7 @@ export default function Contact() {
                       size="large"
                       startIcon={<Send />}
                       disabled={isSubmitting}
-                      sx={{ mt: 2 }}
+                      sx={{ mt: 1 }}
                     >
                       {isSubmitting ? 'Sending...' : 'Send Message'}
                     </Button>
@@ -165,16 +163,16 @@ export default function Contact() {
         <Grid size={{ xs: 12, md: 4 }}>
           <Box sx={{ display: 'flex', flexDirection: 'column', height: '100%' }}>
             {/* Location Card */}
-            <Card elevation={2} sx={{ mb: 4 }}>
-              <CardContent sx={{ textAlign: 'center', p: 3 }}>
-                <LocationOn sx={{ fontSize: 32, color: 'primary.main', mb: 2 }} />
+            <Card elevation={2} sx={{ mb: 2 }}>
+              <CardContent sx={{ textAlign: 'center', p: 2 }}>
+                <LocationOn sx={{ fontSize: 24, color: 'primary.main', mb: 1 }} />
                 <Typography variant="h6" gutterBottom>
                   Location
                 </Typography>
-                <Typography variant="body2" color="text.secondary" sx={{ mb: 2, lineHeight: 1.5 }}>
-                  Based in the Twin Cities area but open to relocation for the right opportunity
+                <Typography variant="body1" color="text.secondary" sx={{ mb: 1, lineHeight: 1.4, alignContent: 'start' }}>
+                  Based in the Twin Cities area but open to relocation for the right opportunity, by which I mean you either back up the money truck or let me compete for QB1.
                 </Typography>
-                <Typography variant="subtitle1" color="primary" fontWeight={500}>
+                <Typography variant="body2" color="primary" fontWeight={500}>
                   Minneapolis, Minnesota
                 </Typography>
               </CardContent>
@@ -189,14 +187,14 @@ export default function Contact() {
               justifyContent: 'center',
               textAlign: 'center'
             }}>
-              <Typography variant="h6" gutterBottom color="text.secondary" sx={{ m: 0 }}>
+              <Typography variant="subtitle2" gutterBottom color="text.secondary" sx={{ m: 0 }}>
                 Connect
               </Typography>
               <Box
                 display="flex"
                 justifyContent="center"
                 alignItems="center"
-                gap={3}
+                gap={2}
               >
                 <Button
                   href="https://www.linkedin.com/in/adam-iverson/"
@@ -217,7 +215,7 @@ export default function Contact() {
                     }
                   }}
                 >
-                  <LinkedIn sx={{ fontSize: 96, color: '#0077B5' }} />
+                  <LinkedIn sx={{ fontSize: 64, color: '#0077B5' }} />
                 </Button>
                 <Button
                   href="https://github.com/adamiverson"
@@ -238,7 +236,7 @@ export default function Contact() {
                     }
                   }}
                 >
-                  <GitHub sx={{ fontSize: 96, color: 'text.primary' }} />
+                  <GitHub sx={{ fontSize: 64, color: 'text.primary' }} />
                 </Button>
               </Box>
             </Box>
@@ -246,30 +244,24 @@ export default function Contact() {
         </Grid>
       </Grid>
 
-      <Divider sx={{ my: 4 }} />
+      <Divider sx={{ my: 2 }} />
 
       {/* Special Message for Athletic Recruiters */}
-      <Box textAlign="center" mb={4}>
-        <Card elevation={3} sx={{ p: 4, backgroundColor: 'action.hover' }}>
-          <Typography variant="h5" component="h3" gutterBottom color="primary">
+      <Box textAlign="center" mb={2}>
+        <Card elevation={3} sx={{ p: 3, backgroundColor: 'action.hover' }}>
+          <Typography variant="h6" component="h3" gutterBottom color="primary">
             Athletic Recruiters & Coaches
           </Typography>
-          <Typography variant="body1" sx={{ maxWidth: 600, mx: 'auto', mb: 3 }}>
+          <Typography variant="body2" sx={{ maxWidth: 600, mx: 'auto', mb: 2 }}>
             Thank you for your interest in my athletic eligibility! While I maintain my
             four years of NCAA eligibility with unwavering optimism, I am equally
             enthusiastic about discussing software engineering opportunities,
             photography collaborations, or trail running adventures.
           </Typography>
-          <Typography variant="body2" color="text.secondary" fontStyle="italic">
+          <Typography variant="caption" color="text.secondary" fontStyle="italic">
             All inquiries welcome - from Division I coaches to startup CTOs
           </Typography>
         </Card>
-      </Box>
-
-      <Box textAlign="center">
-        <Typography variant="body2" color="text.secondary">
-          Response time: Usually within 24 hours
-        </Typography>
       </Box>
     </Container>
   )
