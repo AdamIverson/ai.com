@@ -1,10 +1,8 @@
 // 
-// EmailJS Setup Instructions:
-// 1. Create account at https://www.emailjs.com/
-// 2. Create email service (Gmail, Outlook, etc.)
-// 3. Create email template with variables: {{name}}, {{email}}, {{subject}}, {{message}}
-// 4. Get your Service ID, Template ID, and Public Key
-// 5. Replace the placeholder values in the handleSubmit function below
+// EmailJS Configuration:
+// - Service ID, Template ID, and Public Key are loaded from environment variables
+// - Ensure your .env file contains: VITE_EMAILJS_SERVICE_ID, VITE_EMAILJS_TEMPLATE_ID, VITE_EMAILJS_PUBLIC_KEY
+// - Template should include variables: {{name}}, {{email}}, {{subject}}, {{message}}
 // 
 import emailjs from '@emailjs/browser'
 import { Email, GitHub, LinkedIn, LocationOn, Send } from '@mui/icons-material'
@@ -36,13 +34,19 @@ export default function Contact() {
     setSubmitStatus(null)
 
     try {
-      // TODO: Replace these with your actual EmailJS credentials from https://www.emailjs.com/
-      // After setting up your EmailJS account, service, and template:
+      // Debug: Log environment variables (remove in production)
+      console.log('EmailJS Config:', {
+        serviceId: import.meta.env.VITE_EMAILJS_SERVICE_ID,
+        templateId: import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
+        publicKey: import.meta.env.VITE_EMAILJS_PUBLIC_KEY
+      })
+
+      // Using environment variables for EmailJS configuration
       const result = await emailjs.sendForm(
-        'YOUR_SERVICE_ID',     // Replace with your EmailJS service ID (e.g., 'service_abc123')
-        'YOUR_TEMPLATE_ID',    // Replace with your EmailJS template ID (e.g., 'template_def456')
+        import.meta.env.VITE_EMAILJS_SERVICE_ID,
+        import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
         form.current!,
-        'YOUR_PUBLIC_KEY'      // Replace with your EmailJS public key (e.g., 'user_ghi789')
+        import.meta.env.VITE_EMAILJS_PUBLIC_KEY
       )
 
       console.log('Email sent successfully:', result.text)
@@ -177,20 +181,20 @@ export default function Contact() {
             </Card>
 
             {/* Social Links - centered below location card */}
-            <Box sx={{ 
+            <Box sx={{
               flex: 1,
-              display: 'flex', 
-              flexDirection: 'column', 
+              display: 'flex',
+              flexDirection: 'column',
               alignItems: 'center',
               justifyContent: 'center',
               textAlign: 'center'
             }}>
-              <Typography variant="h6" gutterBottom color="text.secondary" sx={{ m:0 }}>
+              <Typography variant="h6" gutterBottom color="text.secondary" sx={{ m: 0 }}>
                 Connect
               </Typography>
-              <Box 
-                display="flex" 
-                justifyContent="center" 
+              <Box
+                display="flex"
+                justifyContent="center"
                 alignItems="center"
                 gap={3}
               >
