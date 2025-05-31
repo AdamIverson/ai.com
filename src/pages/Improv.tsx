@@ -1,37 +1,9 @@
 import { Groups, Mic, TheaterComedy } from '@mui/icons-material'
 import { Timeline, TimelineConnector, TimelineContent, TimelineDot, TimelineItem, TimelineSeparator } from '@mui/lab'
 import { Box, Card, CardContent, Chip, Container, Typography } from '@mui/material'
+import { improvSkills, improvTimeline } from '../data/improvData'
 
 export default function Improv() {
-  const skills = [
-    "Long-form Improv", "Short-form Games", "Character Development", "Scene Work",
-    "Audience Interaction", "Team Building", "Public Speaking", "Creative Collaboration"
-  ]
-
-
-  const timeline = [
-    {
-      year: "1998",
-      title: "Improv 101",
-      description: "My freshman year of college, improv was offered as a j-term class that didn't start until noon. It fulfilled the fine arts requirement. I loved it so much."
-    },
-    {
-      year: "2012",
-      title: "HUGE 101 with Jill Bernard",
-      description: "Everyone at my bar job was limited to three shifts per week. I really didn't want to get another job, so I took this class in addition to a an intuitive writing class at the loft that I really disliked."
-    },
-    {
-      year: "2017",
-      title: "Family Dinner",
-      description: "it was the first year they auditioned spots and i got one and it was pretty amazing. i think i was in five of six shows. the first several were very difficulat and the last few were the last few were the best. there was an episode where i played uncle carl and i shoved as much food in my mouth as i could and was just free as heck. it was everything i wanted and i will never forget it."
-    },
-    {
-      year: "2021",
-      title: "Twin Cities Improv Festival Performance",
-      description: "on top of the bakken. what a time to be alive."
-    }
-  ]
-
   return (
     <Container maxWidth="lg" sx={{ mt: 4, mb: 4 }}>
       <Box textAlign="center" mb={6}>
@@ -41,7 +13,7 @@ export default function Improv() {
         <Typography variant="h5" color="text.secondary" mb={3}>
         </Typography>
         <Typography variant="body1" color="text.secondary" sx={{ maxWidth: 600, mx: 'auto' }}>
-          Improv has taught me the power of collaboration, quick thinking, and embracing failure as a path to success.
+          Improv has taught me the power of collaboration through listening to others, quick thinking, and embracing failure as a path to success.
           These skills translate directly into my professional and personal life.
         </Typography>
       </Box>
@@ -68,7 +40,7 @@ export default function Improv() {
         <Card elevation={2}>
           <CardContent>
             <Box display="flex" flexWrap="wrap" gap={1}>
-              {skills.map((skill) => (
+              {improvSkills.map((skill) => (
                 <Chip key={skill} label={skill} variant="outlined" />
               ))}
             </Box>
@@ -82,11 +54,11 @@ export default function Improv() {
           <Mic /> Improv Journey
         </Typography>
         <Timeline position="alternate">
-          {timeline.map((item, index) => (
+          {improvTimeline.map((item, index) => (
             <TimelineItem key={index}>
               <TimelineSeparator>
                 <TimelineDot color="primary" />
-                {index < timeline.length - 1 && <TimelineConnector />}
+                {index < improvTimeline.length - 1 && <TimelineConnector />}
               </TimelineSeparator>
               <TimelineContent>
                 <Card elevation={2}>
