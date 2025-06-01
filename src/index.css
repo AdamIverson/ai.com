@@ -36,9 +36,11 @@ body {
 
 h1 {
   font-size: 3.2em;
-  line-height: 1.1;
+  line-height: 1.2;
+  /* Improved line-height for better readability */
 }
 
+/* Enhanced button accessibility */
 button {
   border-radius: 8px;
   border: 1px solid transparent;
@@ -49,15 +51,44 @@ button {
   background-color: #1a1a1a;
   cursor: pointer;
   transition: border-color 0.25s;
+  /* Ensure minimum target size for touch accessibility */
+  min-height: 44px;
+  min-width: 44px;
 }
 
 button:hover {
   border-color: #646cff;
 }
 
+/* Enhanced focus indicators */
 button:focus,
 button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
+  outline: 3px solid #646cff;
+  outline-offset: 2px;
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+
+  button:focus,
+  button:focus-visible {
+    outline: 3px solid;
+    outline-offset: 2px;
+  }
+
+  a {
+    text-decoration: underline;
+  }
+}
+
+/* Forced colors mode support (Windows High Contrast) */
+@media (forced-colors: active) {
+
+  button:focus,
+  button:focus-visible {
+    outline: 3px solid ButtonText;
+    outline-offset: 2px;
+  }
 }
 
 @media (prefers-color-scheme: light) {
@@ -72,5 +103,74 @@ button:focus-visible {
 
   button {
     background-color: #f9f9f9;
+  }
+
+  button:focus,
+  button:focus-visible {
+    outline: 3px solid #1976d2;
+    outline-offset: 2px;
+  }
+}
+
+/* Additional accessibility enhancements */
+
+/* Respect user's motion preferences */
+@media (prefers-reduced-motion: reduce) {
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* Improved focus management for keyboard navigation */
+:focus-visible {
+  outline: 3px solid #646cff;
+  outline-offset: 2px;
+}
+
+/* Ensure sufficient color contrast for links */
+a {
+  font-weight: 500;
+  color: #646cff;
+  text-decoration: inherit;
+  /* Ensure underlines are visible for better accessibility */
+}
+
+a:focus,
+a:focus-visible {
+  outline: 3px solid #646cff;
+  outline-offset: 2px;
+  text-decoration: underline;
+}
+
+/* Support for Windows High Contrast Mode */
+@media (forced-colors: active) {
+  a {
+    forced-color-adjust: none;
+    color: LinkText;
+  }
+
+  a:hover {
+    color: LinkText;
+    text-decoration: underline;
+  }
+
+  button {
+    forced-color-adjust: none;
+    background-color: ButtonFace;
+    color: ButtonText;
+    border: 1px solid ButtonText;
+  }
+}
+
+/* Text scaling support */
+@media (min-resolution: 192dpi) {
+  body {
+    font-size: 16px;
+    /* Ensure minimum readable size on high-DPI displays */
   }
 }

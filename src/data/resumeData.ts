@@ -56,7 +56,13 @@ export const education: Education[] = [
     degree: "Bachelor of Arts: Religion",
     school: "Augustana University",
     year: "2002",
-    details: "Liberal arts education with focus on religious studies"
+    details: "Liberal arts education with focus on religious studies (attended 1997-2002, except fall 1999 semester)"
+  },
+  {
+    degree: "Fall Semester ",
+    school: "University of Minnesota",
+    year: "1999",
+    details: "Attended fall semester before returning to Augustana to complete degree. One of the smartest decisions was recognizing the need to return to finish school in a more suitable environment."
   }
 ];
 
@@ -95,6 +101,7 @@ export const experience: Experience[] = [
       "Built and operated full-time photography business serving individuals and corporations",
       "Self-taught Adobe Creative Suite (Lightroom, Photoshop, InDesign) for complete workflow management",
       "Co-authored and published 'Don't Fall In Love With The City' with Joe Bozic - a photo/poetry book using self-taught InDesign skills",
+      "Published 'gelato for dinner' photography zine (2019) documenting travels through Italy",
       "Developed skills in visual storytelling and ethics of documentation",
       "Successfully transitioned from photography to software engineering career"
     ]
@@ -136,6 +143,12 @@ export const additionalExperience: AdditionalExperience[] = [
     company: "Southeast Homes • 2017",
     period: "2017",
     description: "Worked at residential treatment center helping adult men from East Africa maintain sobriety. Developed crisis intervention and group therapy skills."
+  },
+  {
+    title: "Licensed Alcohol and Drug Counselor (LADC) Intern",
+    company: "Vinland National Center • 2016",
+    period: "2016",
+    description: "Completed dual internships at Vinland's residential treatment center (May-August) in Loretto, MN and outpatient facility (August-December) in Northeast Minneapolis. Specialized in substance abuse treatment for individuals with co-occurring mental health concerns and traumatic brain injuries. Successfully completed internship requirements leading to LADC certification in Minnesota."
   },
   {
     title: "Improv Teacher",
@@ -191,9 +204,15 @@ export const projects: Project[] = [
   },
   {
     title: "\"Don't Fall In Love With The City\"",
-    subtitle: "Published Photo/Poetry Book • Co-authored with Joe Bozic",
+    subtitle: "Published Photo/Poetry Book • Co-authored with Joe Bozic • 2018",
     description: "Self-taught Adobe InDesign to create and publish a photo/poetry book combining visual storytelling with written narrative. Collaborative work combining photography and poetry.",
     technologies: ["Photography", "InDesign", "Publishing", "Creative Writing", "Collaboration"]
+  },
+  {
+    title: "\"gelato for dinner\"",
+    subtitle: "Published Photography Zine • 2019",
+    description: "Self-published photography zine documenting travels through Rome, Florence, Cinque Terre, and Venice in the tradition of street photography.",
+    technologies: ["Photography", "Photo Curation", "InDesign", "Self-Publishing", "Travel Documentation"]
   }
 ];
 

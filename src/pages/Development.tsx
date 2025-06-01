@@ -16,7 +16,7 @@ export default function Development() {
       live: 'https://www.adamiverson.com'
     },
     {
-      name: 'Photography Portfolio',
+      name: 'adamiversonphotography.com',
       description: 'Professional photography portfolio with dynamic galleries and client management.',
       tech: ['React', 'TypeScript', 'Material-UI', 'Node.js',],
       github: "https://github.com/AdamIverson/portfolio-website",
