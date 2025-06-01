@@ -26,7 +26,7 @@ export default function Improv() {
         <Card elevation={2}>
           <CardContent sx={{ textAlign: 'center', py: 4 }}>
             <Typography variant="body1" color="text.secondary">
-              No current shows - taking a break to focus on doing bits with people who aren't interested in my stupid jokes
+              No current shows - I found out during lockdown how much I love quiet and also it just seemed so weird for me to work for stage time anymore.
             </Typography>
           </CardContent>
         </Card>

@@ -1,13 +1,14 @@
 import { DirectionsRun, EmojiEvents, FitnessCenter, Timeline as TimelineIcon, Timer } from '@mui/icons-material'
 import { Box, Card, CardContent, Chip, Container, Grid, LinearProgress, Paper, Typography } from '@mui/material'
-import { goals, races, runningStats, trainingPhilosophy } from '../data/runningData'
+import { calculateRunningStats, goals, races, trainingPhilosophy } from '../data/runningData'
 
 export default function Running() {
+  const dynamicRunningStats = calculateRunningStats()
   const statsWithIcons = [
-    { ...runningStats[0], icon: <DirectionsRun /> },
-    { ...runningStats[1], icon: <EmojiEvents /> },
-    { ...runningStats[2], icon: <Timer /> },
-    { ...runningStats[3], icon: <TimelineIcon /> }
+    { ...dynamicRunningStats[0], icon: <DirectionsRun /> },
+    { ...dynamicRunningStats[1], icon: <EmojiEvents /> },
+    { ...dynamicRunningStats[2], icon: <Timer /> },
+    { ...dynamicRunningStats[3], icon: <TimelineIcon /> }
   ]
 
   return (

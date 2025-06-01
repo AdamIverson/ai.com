@@ -47,6 +47,12 @@ export const education: Education[] = [
     details: "Professional certification in substance abuse counseling"
   },
   {
+    degree: "The Church, Spirituality, and the Arts (Audited)",
+    school: "United Theological Seminary",
+    year: "2012",
+    details: "Audited graduate-level course exploring the intersection of church, spirituality, and artistic expression. The most important thing I learned in this clas was that I was 100% done with academic theology."
+  },
+  {
     degree: "Bachelor of Arts: Religion",
     school: "Augustana University",
     year: "2002",
@@ -88,7 +94,7 @@ export const experience: Experience[] = [
     responsibilities: [
       "Built and operated full-time photography business serving individuals and corporations",
       "Self-taught Adobe Creative Suite (Lightroom, Photoshop, InDesign) for complete workflow management",
-      "Published 'Don't Fall In Love With The City' - a photo/poetry book using self-taught InDesign skills",
+      "Co-authored and published 'Don't Fall In Love With The City' with Joe Bozic - a photo/poetry book using self-taught InDesign skills",
       "Developed skills in visual storytelling and ethics of documentation",
       "Successfully transitioned from photography to software engineering career"
     ]
@@ -120,22 +126,10 @@ export const experience: Experience[] = [
 
 export const additionalExperience: AdditionalExperience[] = [
   {
-    title: "Bar Manager",
-    company: "Halcyon Coffee & Bar • 2003-2007",
-    period: "2003-2007",
-    description: "Progressed from opening barista to Bar Manager over 4 years at Austin coffee bar. Managed inventory ordering, liquor loss prevention, and bartended five nights per week. Developed leadership, inventory management, and operational responsibility skills."
-  },
-  {
-    title: "Bartender",
-    company: "Sweeney's Saloon • 2007-2017",
-    period: "2007-2017",
-    description: "Long-term bartending role spanning 10 years, progressing from four day shifts per week to prime evening shifts (Wednesday, Friday, Sunday nights). Developed exceptional customer service, multitasking, and high-pressure environment management skills."
-  },
-  {
-    title: "Improv Teacher",
-    company: "HUGE Theater • 2015-2020",
-    period: "2015-2020",
-    description: "Taught improv at nonprofit theater, learning to better listen to others and fail beautifully when opportunities arise. Developed skills in teaching, active listening, and leadership."
+    title: "Fitness Coach",
+    company: "Solcana Fitness & Wellness • 2017-2018",
+    period: "2017-2018",
+    description: "Coached functional fitness with emphasis on endurance at inclusive, woman-owned gym for athletes of all abilities."
   },
   {
     title: "Substance Abuse Counselor",
@@ -144,16 +138,40 @@ export const additionalExperience: AdditionalExperience[] = [
     description: "Worked at residential treatment center helping adult men from East Africa maintain sobriety. Developed crisis intervention and group therapy skills."
   },
   {
+    title: "Improv Teacher",
+    company: "HUGE Theater • 2015-2020",
+    period: "2015-2020",
+    description: "Taught improv at nonprofit theater, learning to better listen to others and fail beautifully when opportunities arise. Developed skills in teaching, active listening, and leadership."
+  },
+  {
     title: "Product Ideation Contractor",
     company: "Idea Greenhouse Minnesota • 2014-2018",
     period: "2014-2018",
     description: "Generated creative ideas for large companies' products and marketing strategies. Honed lateral thinking and creative problem-solving abilities."
   },
   {
-    title: "Fitness Coach",
-    company: "Solcana Fitness & Wellness • 2017-2018",
-    period: "2017-2018",
-    description: "Coached functional fitness with emphasis on endurance at inclusive, woman-owned gym for athletes of all abilities."
+    title: "Bartender",
+    company: "Sweeney's Saloon • 2007-2017",
+    period: "2007-2017",
+    description: "Long-term bartending role spanning 10 years, progressing from four day shifts per week to prime evening shifts (Wednesday, Friday, Sunday nights). Developed exceptional customer service, multitasking, and high-pressure environment management skills."
+  },
+  {
+    title: "Bar Manager",
+    company: "Halcyon Coffee & Bar • 2003-2007",
+    period: "2003-2007",
+    description: "Progressed from opening barista to Bar Manager over 4 years at Austin coffee shop and bar. Managed inventory ordering, liquor loss prevention, and tended bar five nights per week. Developed leadership, inventory management, and operational responsibility skills."
+  },
+  {
+    title: "Barista / Closing Manager / Coffee Roaster",
+    company: "Great Plains Coffee Roasting Company • 1998-2002",
+    period: "1998-2002",
+    description: "Multi-role position at Sioux Falls coffee roastery during college years. Progressed from barista to closing manager and coffee roaster, gaining comprehensive coffee industry experience including operations management, customer service, and specialty coffee roasting techniques."
+  },
+  {
+    title: "Custodian",
+    company: "Huron Arena • Summer 1998 & 1999",
+    period: "1998-1999",
+    description: "Summer custodial work at Huron, SD arena facility. Responsibilities included stripping and waxing floors (including hardwood basketball court), facility maintenance, and comprehensive salvage operations under a Depression-era boss who valued every material item - from old toilets to every strip of maple baseboard."
   }
 ];
 
@@ -173,9 +191,9 @@ export const projects: Project[] = [
   },
   {
     title: "\"Don't Fall In Love With The City\"",
-    subtitle: "Published Photo/Poetry Book",
-    description: "Self-taught Adobe InDesign to create and publish a photo/poetry book combining visual storytelling with written narrative.",
-    technologies: ["Photography", "InDesign", "Publishing", "Creative Writing"]
+    subtitle: "Published Photo/Poetry Book • Co-authored with Joe Bozic",
+    description: "Self-taught Adobe InDesign to create and publish a photo/poetry book combining visual storytelling with written narrative. Collaborative work combining photography and poetry.",
+    technologies: ["Photography", "InDesign", "Publishing", "Creative Writing", "Collaboration"]
   }
 ];
 

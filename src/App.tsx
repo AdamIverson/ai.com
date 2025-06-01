@@ -6,6 +6,7 @@ import {
 import { useEffect, useMemo, useState } from 'react'
 import { Route, BrowserRouter as Router, Routes } from 'react-router-dom'
 import Navbar from './components/Navbar'
+import SkipNavigation from './components/SkipNavigation'
 import CollegeEligibility from './pages/CollegeEligibility'
 import Contact from './pages/Contact'
 import Development from './pages/Development'
@@ -84,18 +85,21 @@ function App() {
   return (
     <ThemeProvider theme={theme}>
       <CssBaseline />
+      <SkipNavigation />
       <Router>
         <Navbar mode={mode} toggleColorMode={toggleColorMode} />
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/development" element={<Development />} />
-          <Route path="/photography" element={<Photography />} />
-          <Route path="/resume" element={<Resume />} />
-          <Route path="/improv" element={<Improv />} />
-          <Route path="/running" element={<Running />} />
-          <Route path="/college-eligibility" element={<CollegeEligibility />} />
-          <Route path="/contact" element={<Contact />} />
-        </Routes>
+        <main id="main-content" tabIndex={-1}>
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/development" element={<Development />} />
+            <Route path="/photography" element={<Photography />} />
+            <Route path="/resume" element={<Resume />} />
+            <Route path="/improv" element={<Improv />} />
+            <Route path="/running" element={<Running />} />
+            <Route path="/college-eligibility" element={<CollegeEligibility />} />
+            <Route path="/contact" element={<Contact />} />
+          </Routes>
+        </main>
       </Router>
     </ThemeProvider>
   )

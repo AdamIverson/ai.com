@@ -17,7 +17,21 @@ export default function Home() {
 
       <Grid container spacing={4} justifyContent="center">
         <Grid size={{ xs: 12, sm: 6, md: 6, lg: 3 }}>
-          <Card elevation={3} sx={{ height: '100%', cursor: 'pointer' }} onClick={() => window.location.href = '/development'}>
+          <Card
+            elevation={3}
+            sx={{ height: '100%' }}
+            component="button"
+            onClick={() => window.location.href = '/development'}
+            onKeyDown={(e) => {
+              if (e.key === 'Enter' || e.key === ' ') {
+                e.preventDefault()
+                window.location.href = '/development'
+              }
+            }}
+            role="button"
+            tabIndex={0}
+            aria-label="Navigate to Development page"
+          >
             <CardContent sx={{ textAlign: 'center', p: 3 }}>
               <Typography variant="h5" component="h2" gutterBottom>
                 Development
@@ -30,11 +44,25 @@ export default function Home() {
         </Grid>
 
         <Grid size={{ xs: 12, sm: 6, md: 6, lg: 3 }}>
-          <Card elevation={3} sx={{ height: '100%', cursor: 'pointer' }} onClick={() => window.open('https://adamiversonphotography.com', '_blank')}>
+          <Card
+            elevation={3}
+            sx={{ height: '100%' }}
+            component="button"
+            onClick={() => window.open('https://adamiversonphotography.com', '_blank')}
+            onKeyDown={(e) => {
+              if (e.key === 'Enter' || e.key === ' ') {
+                e.preventDefault()
+                window.open('https://adamiversonphotography.com', '_blank')
+              }
+            }}
+            role="button"
+            tabIndex={0}
+            aria-label="Open Photography portfolio in new tab"
+          >
             <CardContent sx={{ textAlign: 'center', p: 3 }}>
               <Typography variant="h5" component="h2" gutterBottom sx={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: 1 }}>
                 Photography
-                <OpenInNew sx={{ fontSize: 20, color: 'text.secondary' }} />
+                <OpenInNew sx={{ fontSize: 20, color: 'text.secondary' }} aria-hidden="true" />
               </Typography>
               <Typography variant="body2" color="text.secondary">
                 Visual storytelling through landscape, portrait, and event photography
@@ -44,7 +72,21 @@ export default function Home() {
         </Grid>
 
         <Grid size={{ xs: 12, sm: 6, md: 6, lg: 3 }}>
-          <Card elevation={3} sx={{ height: '100%', cursor: 'pointer' }} onClick={() => window.location.href = '/improv'}>
+          <Card
+            elevation={3}
+            sx={{ height: '100%' }}
+            component="button"
+            onClick={() => window.location.href = '/improv'}
+            onKeyDown={(e) => {
+              if (e.key === 'Enter' || e.key === ' ') {
+                e.preventDefault()
+                window.location.href = '/improv'
+              }
+            }}
+            role="button"
+            tabIndex={0}
+            aria-label="Navigate to Improv page"
+          >
             <CardContent sx={{ textAlign: 'center', p: 3 }}>
               <Typography variant="h5" component="h2" gutterBottom>
                 Improv
@@ -57,7 +99,21 @@ export default function Home() {
         </Grid>
 
         <Grid size={{ xs: 12, sm: 6, md: 6, lg: 3 }}>
-          <Card elevation={3} sx={{ height: '100%', cursor: 'pointer' }} onClick={() => window.location.href = '/running'}>
+          <Card
+            elevation={3}
+            sx={{ height: '100%' }}
+            component="button"
+            onClick={() => window.location.href = '/running'}
+            onKeyDown={(e) => {
+              if (e.key === 'Enter' || e.key === ' ') {
+                e.preventDefault()
+                window.location.href = '/running'
+              }
+            }}
+            role="button"
+            tabIndex={0}
+            aria-label="Navigate to Running page"
+          >
             <CardContent sx={{ textAlign: 'center', p: 3 }}>
               <Typography variant="h5" component="h2" gutterBottom>
                 Running
@@ -82,7 +138,6 @@ export default function Home() {
         </Button>
         <Button
           variant="outlined"
-          endIcon={<OpenInNew />}
           href="/resume"
           sx={{ mb: 2 }}
         >

@@ -5,9 +5,9 @@ import { additionalExperience, education, experience, projects, skills } from '.
 export default function Resume() {
 
   return (
-    <Container maxWidth="lg" sx={{ mt: 4, mb: 4 }}>
+    <Container maxWidth="lg" sx={{ mt: 4, mb: 4 }} component="article" aria-labelledby="resume-title">
       <Box textAlign="center" mb={4}>
-        <Typography variant="h2" component="h1" gutterBottom>
+        <Typography variant="h2" component="h1" id="resume-title" gutterBottom>
           Resume
         </Typography>
         <Typography variant="h5" color="text.secondary" mb={3}>
@@ -23,15 +23,16 @@ export default function Resume() {
           sx={{ mb: 2 }}
           href="/resume.pdf"
           download
+          aria-label="Download Adam Iverson's resume as PDF"
         >
           Download Resume
         </Button>
       </Box>
 
       {/* Skills Section */}
-      <Box mb={6}>
-        <Typography variant="h4" component="h2" gutterBottom sx={{ display: 'flex', alignItems: 'center', gap: 1 }}>
-          <Work /> Technical Skills
+      <Box mb={6} component="section" aria-labelledby="skills-heading">
+        <Typography variant="h4" component="h2" id="skills-heading" gutterBottom sx={{ display: 'flex', alignItems: 'center', gap: 1 }}>
+          <Work aria-hidden="true" /> Technical Skills
         </Typography>
         <Grid container spacing={3}>
           {Object.entries(skills).map(([category, skillList]) => (

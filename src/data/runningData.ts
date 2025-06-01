@@ -19,12 +19,32 @@ export interface Goal {
   target: string;
 }
 
-export const runningStats: RunningStats[] = [
-  { label: "Total Races", value: "17" },
-  { label: "100K Completions", value: "2" },
-  { label: "50-Mile Finishes", value: "8" },
-  { label: "Years Ultrarunning", value: "12+" }
-];
+// Function to calculate running stats dynamically from races array
+export const calculateRunningStats = (): RunningStats[] => {
+  const hundredMileAttempts = races.filter(race => race.distance === "100 Miler").length;
+  const hundredMileCompletions = races.filter(race => race.distance === "100 Miler" && race.time !== "DNF" && race.placement !== "DNF").length;
+
+  const hundredKAttempts = races.filter(race => race.distance === "100K").length;
+  const hundredKCompletions = races.filter(race => race.distance === "100K" && race.time !== "DNF" && race.placement !== "DNF").length;
+
+  const fiftyMileAttempts = races.filter(race => race.distance === "50 Miler").length;
+  const fiftyMileCompletions = races.filter(race =>
+    race.distance === "50 Miler" &&
+    race.time !== "DNF" &&
+    race.placement !== "DNF" &&
+    !race.time.includes("miles")
+  ).length;
+
+  const marathonAttempts = races.filter(race => race.distance === "Marathon").length;
+  const marathonCompletions = races.filter(race => race.distance === "Marathon" && race.time !== "DNF" && race.placement !== "DNF").length;
+
+  return [
+    { label: "100 Mile Attempts", value: `${hundredMileCompletions}/${hundredMileAttempts}` },
+    { label: "100K Completions", value: `${hundredKCompletions}/${hundredKAttempts}` },
+    { label: "50-Mile Finishes", value: `${fiftyMileCompletions}/${fiftyMileAttempts}` },
+    { label: "Marathons", value: `${marathonCompletions}/${marathonAttempts}` }
+  ];
+};
 
 export const races: Race[] = [
   {
@@ -60,12 +80,28 @@ export const races: Race[] = [
     note: "Wisconsin trail racing adventure"
   },
   {
+    name: "Superior Fall Trail Race",
+    distance: "100 Miler",
+    year: "2016",
+    time: "DNF",
+    placement: "DNF",
+    note: "Second 100-mile DNF attempt at Superior Fall"
+  },
+  {
     name: "Minnesota Voyageur Trail Ultra",
     distance: "50 Miler",
     year: "2016",
     time: "13:48:21",
     placement: "263rd Overall",
     note: "Another solid Voyageur finish"
+  },
+  {
+    name: "Superior Fall Trail Race",
+    distance: "100 Miler",
+    year: "2017",
+    time: "DNF",
+    placement: "DNF",
+    note: "Third 100-mile DNF attempt at Superior Fall"
   },
   {
     name: "Superior Fall Trail Race",
@@ -108,6 +144,14 @@ export const races: Race[] = [
     note: "100-mile attempt - valuable learning experience"
   },
   {
+    name: "Superior Fall Trail Race",
+    distance: "100 Miler",
+    year: "2014",
+    time: "DNF",
+    placement: "DNF",
+    note: "100-mile DNF attempt at Superior Fall"
+  },
+  {
     name: "Wild Duluth Races",
     distance: "100K",
     year: "2013",
@@ -137,7 +181,7 @@ export const races: Race[] = [
     year: "2013",
     time: "42 miles",
     placement: "DNF",
-    note: "Technical and challenging Minnesota trail race"
+    note: "DNF at mile 42. Midnight start with mandatory lights, brutal weather conditions - first 17-mile loop was thick deep mud, by the second loop it was frozen (or maybe the other way around). Three 17-mile loops total. Dropped because I was afraid to go down a hill I knew was coming and concerned about hypothermia. Got a ride back on a four wheeler and in the back seat of someone's Lexus SUV. I was so sad that I didn't finish."
   },
   {
     name: "Afton Trail Run",
@@ -146,6 +190,22 @@ export const races: Race[] = [
     time: "6:48:54",
     placement: "150th Overall",
     note: "Classic Minnesota trail run in Afton State Park"
+  },
+  {
+    name: "Superior Fall Trail Race",
+    distance: "50 Miler",
+    year: "2012",
+    time: "34 miles",
+    placement: "DNF",
+    note: "DNF at mile 34 after being stung by a bunch of hornets, getting surprise rained on for a couple of hours, and then starting to do math in my head - which I would eventually realize was kryptonite to me while running"
+  },
+  {
+    name: "Twin Cities Medtronic Marathon",
+    distance: "Marathon",
+    year: "2011",
+    time: "5:01:35",
+    placement: "7003 out of 8534",
+    note: "Classic Twin Cities road marathon. I wore a pair of huarache sandals that broke on my way to the start line. I had to tie an impromptu and gigantic knot that sat between my first and second toes underneath the sandal and wrecked my foot. I ate a couple of cookies that were supposed help take the edge off but I'm almost positive they made it much harder to run 26 miles in a crowd."
   },
   {
     name: "Superior Fall Trail Race",
